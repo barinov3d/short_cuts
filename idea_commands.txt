@@ -1,0 +1,2 @@
+Alt + Insert - generate menu
+Ctrl + P - show parameters info (all constructors)

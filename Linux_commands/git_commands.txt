@@ -1,0 +1,38 @@
+git config --global user.name Dmitry Barinov
+git config --global user.email barinov3d@gmail.com
+git config -l - show all previous commands
+cat ~/.gitconfig - configuration file
+
+git init . - create git database
+git status - current branch status
+git add * - add all untracked files to git
+git commit -m "My initial commit. This is version 1"
+
+command <---Stages
+echo "Hello GIT" > file.txt <--- Untracked
+git add file.txt <--- Staged
+git commit -m "Version1" <--- Copy in Local repository
+git push <--- Copy in Remote Repository 
+
+git log - show all commit history
+git log -10 - show last 10 commits
+git log -10 -p - show last 10 commits + prints changes
+git checkout -- file1.txt - revert file stage to last commit
+git diff --staged
+git diff --staged - show what would bewritten to git log if file would be commited
+ssh-keygen
+ll ~/.ssh/ - ssh-keys directory
+git remote -v - show remote repository link
+git remote set-url origin git@github.com:barinov3d/git_project.git
+git branch - show all branches
+git branch fix_error
+git checkout fix_error - move to branch 'fix_error'
+git branch -d fix_error - delete branch
+git checkout -b fix_error2 - create branch and checkout
+git merge branch_name - merge branch name -> current branch
+git commit --amend -m "New commit message" - change most resent commit message
+git checkout 30aa0746dd67c32585c606edb1fdc56c857ba8d1 - back to commit with hash
+git checkout master - back to all commits
+git commit --amend - change most resent commit
+git reset --hard HEAD~2 - reset 3 last commits
+git push origin --delete fix_bugs - delete branch from remote repository

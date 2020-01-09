@@ -1,0 +1,35 @@
+uname - show short system info
+uname -a - show full system info
+lscpu - show cpu info
+ls -l - files list in directory
+echo $PATH - where to look at for commands
+echo - text commands
+Ctrl + Alt + F3 - full terminal mode
+Ctrl + Alt + F4 - full terminal mode other session
+Ctrl + Alt + F2 / F7 - exit full terminal mode
+man -k uptime - commands with text 'uptime'
+Ctrl+C - terminate current process
+Ctrl+Z - leave current process at the background
+bg - background processes
+fg - move back backgroud process to foreground
+info - another command documentation type
+less - show text file by line (use space)
+whatis uptime
+whereis uptime
+locate uptime - find file/files with text 'uptime'
+cd - change directory
+cat - show text file
+ps - show processes
+ll - 
+
+---users and groups---
+useradd  -m vasya   - создать юзера vasya с домашней  директорией
+userdel –r vasya     - стереть юзера vasya с его домашней  директорией
+/etc/skel    -  это шаблон домашней директории
+passwd vasya   - изменить пароль для юзера vasya
+
+groupadd Programmers  - создать группу Programmers
+groupdel Programmers  - стереть группу Programmers
+
+usermod –aG Programmers vasya  - добавить юзера vasya в группу Programmers
+deluser vasya Programmers  - удалить юзера vasya  из групы Programmers

@@ -1,0 +1,4 @@
+jstack shows you only Thread dump
+ps - ef 5068 - Idea process
+jstack 5068 - process info
+jstack -e 5068 | grep allocated - show allocated memory

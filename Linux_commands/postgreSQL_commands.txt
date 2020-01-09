@@ -1,0 +1,28 @@
+sudo -u postgres psql - go to postgres user session
+
+psql - postgres command line
+\q - close postgres command line/disconnect from database
+
+create database shop;
+\c shop - connect to db
+\d - show all table and relations
+
+
+---table creation---
+create table customer(
+id serial primary key,
+name varchar(255),
+phone varchar(30),
+email varchar(255)
+);
+
+\d customer - description of table 'customer'
+insert into customer(name, phone, email) values ('Vasya','02','vas@gmail.com');
+select pp.*,p.name from product_photo pp left join product p on p.id=pp.product_id; - join two tables example.
+join command can be left/right/inner
+delete from product_photo where id = 3;
+update product_photo set url='Iphone_photo_1' where id=1;
+...  limit 1 offcet 1; - limit responce by second value
+select c.name,coalesce(sum(p.price), 0) as orders_sum from customer c left join cart on cart.customer_id=c.id left join cart_product cp on cp.cart_id=cart.id left join product p on p.id=cp.product_id group by c.name order by orders_sum desc;
+select c.name,coalesce(sum(p.price), 0) as orders_sum from customer c left join cart on cart.customer_id=c.id left join cart_product cp on cp.cart_id=cart.id left join product p on p.id=cp.product_id group by c.name having sum(p.price)>0;
+
